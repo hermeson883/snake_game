@@ -1,15 +1,6 @@
 import pygame
 import random
 
-pygame.init()
-resolution = (500,500)
-screen = pygame.display.set_mode(resolution)
-clock = pygame.time.Clock()
-preto = (0,0,0)
-screen.fill(preto)
-
-pygame.display.update() #ATUALIZANDO O PYGAME
-
 class Snake:
     def __init__(self):
         self.color = [135, 206, 235]
@@ -107,6 +98,14 @@ class Fruit:
 
 #Start game
 if __name__ == "__main__":
+    pygame.init()
+    resolution = (500, 500)
+    screen = pygame.display.set_mode(resolution)
+    clock = pygame.time.Clock()
+    preto = (0, 0, 0)
+    screen.fill(preto)
+    pygame.display.update()  # ATUALIZANDO O PYGAME
+
     snake = Snake()
     fruit = Fruit(snake)
     while True:
