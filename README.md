@@ -7,7 +7,7 @@
 
 - 📄 Know about my experiences [Python, Html, Css, JavaScript](Python, Html, Css, JavaScript)
 
-<h3 align="left">Connect with me:</h3>
+<h3 align="left">Connect with me: <a href="https://github.com/hermeson883">My Github👩‍💻</a> </h3>
 <p align="left">
 </p>
 
