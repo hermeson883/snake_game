@@ -6,6 +6,7 @@ class Snake:
         self.color = [135, 206, 235]
         self.size = (10, 10)
         self.velocity = 5
+        self.max_size = 490
         self.texture = pygame.Surface(self.size)
         self.texture.fill(self.color)
 
@@ -64,7 +65,7 @@ class Snake:
         tail = self.body[1:]
         x = head[0]
         y = head[1]
-        return x < 0 or y < 0 or x > 490 or y > 490 or head in tail
+        return x < 0 or y < 0 or x > 490 or y > 490 or head in tail or len(self.body) > self.max_size
 
     def ouroboros(self):
         return self.body[0] == self.body[1:]
@@ -83,8 +84,8 @@ class Fruit:
 
     @staticmethod
     def check_position(snake):
-        x = random.randint(0,48) * 10
-        y = random.randint(0,48) * 10
+        x = random.randint(1,48) * 10
+        y = random.randint(1,48) * 10
 
         if (x,y) in snake.body:
             Fruit.check_position(snake)
